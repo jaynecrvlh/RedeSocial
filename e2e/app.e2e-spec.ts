@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('rede-social App', () => {
+describe('atv2 App', () => {
   let page: AppPage;
 
   beforeEach(() => {

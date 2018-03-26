@@ -1,0 +1,14 @@
+.post{
+    border-left: 6px solid rgb(36, 36, 36);
+    background-color: #EEE;
+    box-shadow: none;
+    margin: 20px 0px;
+}
+
+.btn-like {
+    color: #AAA;
+}
+
+.btn-like--curtiu {
+    color: #222;
+}

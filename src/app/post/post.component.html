@@ -1,0 +1,13 @@
+<div class="card post">
+  <div class="card-content">
+    <span class="card-title">{{post.nomePessoa}}</span>
+    <p>{{post.mensagem}}</p>
+  </div>
+  <div class="card-action right-align">
+    <span class="btn-like waves-effect btn-flat"
+          [ngClass]="{'btn-like--curtiu': curtiu}"
+          (click)="like()">
+      <i class="material-icons right">thumb_up</i> {{post.qtdLikes}}
+    </span>
+  </div>
+</div>

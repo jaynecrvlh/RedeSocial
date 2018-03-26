@@ -1,0 +1,6 @@
+<div class="linha-tempo" >
+    <post *ngFor="let post of posts"
+          [post]="post"
+          (recebeuLike)="capturarEvento($event)">
+    </post>
+</div>
