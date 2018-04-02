@@ -6,8 +6,14 @@
   <div class="card-action right-align">
     <span class="btn-like waves-effect btn-flat"
           [ngClass]="{'btn-like--curtiu': curtiu}"
-          (click)="like()">
+          (click)="like()"
+          title="Curtir">
       <i class="material-icons right">thumb_up</i> {{post.qtdLikes}}
+    </span>
+    <span class="btn-delete waves-effect btn-flat"
+          (click)="delete()"
+          title="Apagar">
+        <i class="material-icons">delete</i>
     </span>
   </div>
 </div>

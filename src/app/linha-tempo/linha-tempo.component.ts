@@ -1,19 +1,25 @@
+import { PostService } from './../Serviço/post.service';
 import { Post } from './../post/post';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
 @Component({
   selector: 'linha-tempo',
   templateUrl: './linha-tempo.component.html',
-  styleUrls: ['./linha-tempo.component.css']
+  styleUrls: ['./linha-tempo.component.css'],
+  providers: [PostService]
 })
-export class LinhaTempoComponent {
 
-  posts = [
-    new Post (1, "Jayne", "Ola mundo", 1000),
-    new Post (2, "KIQ", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean interdum massa sit amet mi vulputate mollis. Sed vehicula dui justo, non aliquet quam luctus sed. Donec et ante enim. In interdum sapien ut urna fringilla tempor. Phasellus dapibus, libero nec convallis euismod, neque ipsum tincidunt dolor, eu fringilla sem erat ut ante.", 1)
-  ];
+export class LinhaTempoComponent implements OnInit {
+
+  posts: Post[];
+  constructor(private postService: PostService){}
 
   capturarEvento(event){
     console.log(event);
+  }
+
+  ngOnInit(){
+    this.posts = this.postService.getPosts();
   }
 
 }

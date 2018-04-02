@@ -1,12 +1,22 @@
 .post{
-    border-left: 6px solid rgb(36, 36, 36);
+    border-left: 6px solid #222;
     background-color: #EEE;
     box-shadow: none;
-    margin: 20px 0px;
+    margin-bottom: 20px;
 }
 
+.btn-delete,
 .btn-like {
+    /* min-width: 36px; */
+    padding: 0 10px;
     color: #AAA;
+    /* display: inline-flex;
+    justify-content: center; */
+}
+
+.btn-delete:hover,
+.btn-like:hover {
+    color: #222;
 }
 
 .btn-like--curtiu {

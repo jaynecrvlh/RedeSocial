@@ -6,19 +6,23 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LinhaTempoComponent } from './linha-tempo/linha-tempo.component';
 import { PostComponent } from './post/post.component';
+import { routing } from './app.routing';
+import { NovoPostComponent } from './novo-post/novo-post.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     LinhaTempoComponent,
-    PostComponent
+    PostComponent,
+    NovoPostComponent
   ],
   imports: [
     BrowserModule,
-    MaterializeModule
+    MaterializeModule,
+    routing
   ],
-  providers: [],
+  providers: [],  
   bootstrap: [AppComponent]
 })
 export class AppModule { }
