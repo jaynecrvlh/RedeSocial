@@ -3,6 +3,11 @@
     <span class="card-title">{{post.nomePessoa}}</span>
     <p>{{post.mensagem}}</p>
   </div>
+  <div *ngIf="editar">
+    <textarea class="text" [(ngModel)]="this.textEdit"></textarea><br>
+    <button class="waves-effect btn-flat right" (click)="edit(post)"><i class="material-icons tiny check right">check</i></button>
+    <button class="waves-effect btn-flat right" (click)="cancelarEdicao()"><i class="material-icons tiny right clear">clear</i></button>
+  </div>
   <div class="card-action right-align">
     <span class="btn-like waves-effect btn-flat"
           [ngClass]="{'btn-like--curtiu': curtiu}"
@@ -11,9 +16,12 @@
       <i class="material-icons right">thumb_up</i> {{post.qtdLikes}}
     </span>
     <span class="btn-delete waves-effect btn-flat"
-          (click)="delete()"
+          (click)="delete(post)"
           title="Apagar">
         <i class="material-icons">delete</i>
+    </span>
+    <span class="btn-delete waves-effect btn-flat" *ngIf="!edicao" (click)="editConfirm()">
+      <i class="material-icons tiny delete">edit</i>
     </span>
   </div>
 </div>

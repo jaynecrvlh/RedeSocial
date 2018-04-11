@@ -6,7 +6,7 @@ const APP_ROUTES: Routes = [
 
     {path:"", redirectTo: "/linha-tempo", pathMatch:"full"},
     {path:"linha-tempo", component:LinhaTempoComponent},
-    {path:"novo-post", component:NovoPostComponent}
+    {path:"pagina-postar", component:NovoPostComponent}
 ]
 
 export const routing = RouterModule.forRoot(APP_ROUTES);

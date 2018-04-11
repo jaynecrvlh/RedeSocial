@@ -1,7 +1,15 @@
 .novo-post{
     margin-top: 50px;
+    background-color: #EEE;
+    padding: 30px;
+    border-top: 20px solid #222;
+    box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.1);
+
 }
 .botao{
     float: right;
     background-color: #222;
+}
+.titulo{
+    font-size: 20pt;
 }
